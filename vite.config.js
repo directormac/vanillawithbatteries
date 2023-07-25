@@ -1,12 +1,14 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 
+const BASE = '/vanillawithbatteries';
 
 export default defineConfig({
+  base: process.env.NODE_ENV === 'production' ? BASE : '/',
   build: {
-    outDir: '../dist',
+    outDir: './dist',
     emptyOutDir: true,
   },
   test: {
     include: ['**/*.test.js'],
-  }
-})
+  },
+});
