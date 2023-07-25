@@ -24,3 +24,7 @@ document.querySelector('#app').innerHTML = `
 `
 
 setupCounter(document.querySelector('#counter'))
+
+
+import { numericalArrayOperations } from './playground/arrays';
+numericalArrayOperations();
